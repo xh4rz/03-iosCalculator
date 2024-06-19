@@ -3,6 +3,34 @@ import { useState } from 'react';
 export const useCalculator = () => {
 	const [number, setNumber] = useState('0');
 
+	const clean = () => {
+		setNumber('0');
+	};
+
+	const deleteOperation = () => {
+		let currentSign = '';
+		let temporalNumber = number;
+
+		if (number.includes('-')) {
+			currentSign = '-';
+			temporalNumber = number.substring(1);
+		}
+
+		if (temporalNumber.length > 1) {
+			return setNumber(currentSign + temporalNumber.slice(0, -1));
+		}
+
+		setNumber('0');
+	};
+
+	const toggleSign = () => {
+		if (number.includes('-')) {
+			return setNumber(number.replace('-', ''));
+		}
+
+		setNumber('-' + number);
+	};
+
 	const buildNumber = (numberString: string) => {
 		if (number.includes('.') && numberString === '.') {
 			return;
@@ -40,6 +68,9 @@ export const useCalculator = () => {
 		number,
 
 		// Methods
-		buildNumber
+		buildNumber,
+		toggleSign,
+		clean,
+		deleteOperation
 	};
 };
