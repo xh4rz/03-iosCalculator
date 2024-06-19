@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 
 export const colors = {
   darkGray: '#2D2D2D',
@@ -6,37 +6,37 @@ export const colors = {
   orange: '#FF9427',
   textPrimary: 'white',
   textSecondary: '#666666',
-  background: '#000000',
+  background: '#000000'
 };
 
 export const styles = StyleSheet.create({
   background: {
     flex: 1,
-    backgroundColor: colors.background,
+    backgroundColor: colors.background
   },
   calculatorContainer: {
     flex: 1,
     padding: 20,
-    justifyContent: 'flex-end',
+    justifyContent: 'flex-end'
   },
   mainResult: {
     color: colors.textPrimary,
     fontSize: 70,
     textAlign: 'right',
     marginBottom: 10,
-    fontWeight: '400',
+    fontWeight: '400'
   },
   subResult: {
     color: colors.textSecondary,
     fontSize: 40,
     textAlign: 'right',
-    fontWeight: '300',
+    fontWeight: '300'
   },
   row: {
     flexDirection: 'row',
     justifyContent: 'center',
     marginBottom: 18,
-    paddingBottom: 10,
+    paddingBottom: 10
   },
   button: {
     height: 80,
@@ -44,13 +44,13 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.darkGray,
     borderRadius: 100,
     justifyContent: 'center',
-    marginHorizontal: 10,
+    marginHorizontal: 10
   },
   buttonText: {
     textAlign: 'center',
     padding: 10,
     fontSize: 30,
     color: 'white',
-    fontWeight: '300',
-  },
+    fontWeight: '300'
+  }
 });
